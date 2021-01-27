@@ -96,18 +96,11 @@
         withdrawBtn.addEventListener('click', function () {
             const withdrawNumber = getInputNumber('withdrawAmount');
 
+            updateSpan('currentWithdraw',withdrawNumber);
+            updateSpan('currentBalance',-1*withdrawNumber);
 
-            // const currentWithdraw = document.getElementById('currentWithdraw').innerText;
-            // const currentWithdrawNumber = parseFloat(currentWithdraw);
-            // const totalWithdraw = withdrawAmountNumber + currentWithdrawNumber;
-            // document.getElementById('currentWithdraw').innerText = totalWithdraw;
-            // document.getElementById('withdrawAmount').value = "";
 
-            // const currentBalance = document.getElementById('currentBalance').innerText;
-            // const currentBalanceNumber = parseFloat('currentBalance');
-            // const totalBalance = (currentBalanceNumber) - (totalWithdraw);
-            // document.getElementById('currentBalance').innerText = totalBalance;
-            // document.getElementById('withdrawAmount').value = "";
+             document.getElementById('withdrawAmount').value = "";
         })
 
         function updateSpan(id,depositNumber) {
